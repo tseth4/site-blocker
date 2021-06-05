@@ -13,7 +13,6 @@ document.querySelector("#save-sites").addEventListener("click", () => {
 });
 
 chrome.storage.onChanged.addListener(function (changes, namespace) {
-  console.log(changes);
   let siteList = document.querySelector("#site-list");
   siteList.innerHTML = "";
   changes.blockedSites.newValue.forEach((e) => {
@@ -23,8 +22,7 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
   });
 });
 
-chrome.storage.local.get("blockedsites", (response) => {
-  console.log(response);
+chrome.storage.local.get("blockedSites", (response) => {
   if (!isEmpty(response)) {
     let siteList = document.querySelector("#site-list");
     response.blockedSites.forEach((e) => {

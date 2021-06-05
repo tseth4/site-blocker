@@ -1,5 +1,3 @@
-console.log("hello from content");
-
 chrome.runtime.onMessage.addListener((request) => {
   let blockedHtmlUrl = chrome.extension.getURL("blocked.html");
   chrome.storage.local.get("blockedSites", (response) => {
