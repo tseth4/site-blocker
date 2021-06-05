@@ -1,30 +1,26 @@
-# Stay focused - youtube
+# Site-blocker
 
-A google chrome extension that focuses on a single youtube video and redirects back to the video when the user deviates to any other youtube video.
+Blocking sites a compulsively check
 
-# Components
-![diagram](assets/stay-focused-diagram.svg)
-
+<!-- # Components -->
+<!-- ![diagram](assets/stay-focused-diagram.svg) -->
 
 # Installation
+
 ```
 // clone repositiory
-git clone https://github.com/tzrtg/stay-focused
-// In chrome, navigate to extensions. 
-chrome://extensions/
-// click load unpacked and select stay-focused
-// go a youtube video tutorial you would like to focus on and click the top 'stay-focus' (kirby) icon in browser
-// then click focus
-// click unfocus to unset 'focused' url
+git clone https://github.com/tzrtg/site-blocker
+// in chrome, navigate to extensions (chrome://extensions/)
+// click load unpacked and select site-blocker
+// from pop up, go to options and specify sites (format: "mail.google.com, coinbase.com, youtube.com, twitter.com")
 ```
 
 ### Bug report / issues
 
-1. background and content gets caught in a loop and keeps reloading the same url.
-**occurrence:** rarely
+<!-- 1. background and content gets caught in a loop and keeps reloading the same url.
+   **occurrence:** rarely
 
 2. hiding related videos only gets hidden after a page refresh.
-**occurrence:** constant
+   **occurrence:** constant -->
 
 tzrtg@protonmail.com
-
