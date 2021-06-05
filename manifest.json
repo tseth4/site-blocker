@@ -1,0 +1,29 @@
+{
+  "name": "site-blocker",
+  "description": "block sites",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "./assets/icons8-cancel-64.png",
+    "32": "./assets/icons8-cancel-128.png",
+    "48": "./assets/icons8-cancel-256.png",
+    "128": "./assets/icons8-cancel-512.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "matches": ["https://*.youtube.com/*", "https://*.google.com/*"]
+    }
+  ],
+  "background": {
+    "scripts": ["./background.js"]
+  },
+  "options_page": "./options.html",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Open the popup"
+  },
+  "permissions": ["tabs", "https://www.youtube.com/*", "https://*.google.com/*", "storage"],
+  "web_accessible_resources": ["blocked.html"]
+}
