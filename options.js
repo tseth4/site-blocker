@@ -1,4 +1,3 @@
-
 // need disabled button functionality if no input is present or incorrect format
 // need to maintain the input inside box.
 function saveSites() {
@@ -22,5 +21,24 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
     newNode.innerHTML = e;
     siteList.appendChild(newNode);
   });
-
 });
+
+chrome.storage.local.get("blockedsites", (response) => {
+  console.log(response);
+  if (!isEmpty(response)) {
+    let siteList = document.querySelector("#site-list");
+    response.blockedSites.forEach((e) => {
+      let newNode = document.createElement("li");
+      newNode.innerHTML = e;
+      siteList.appendChild(newNode);
+    });
+  }
+});
+
+function isEmpty(obj) {
+  for (var prop in obj) {
+    if (obj.hasOwnProperty(prop)) return false;
+  }
+
+  return true;
+}

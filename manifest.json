@@ -13,7 +13,18 @@
     {
       "js": ["content.js"],
       "css": ["content.css"],
-      "matches": ["https://*.youtube.com/*", "https://*.google.com/*"]
+      "matches": [
+        "https://*.youtube.com/*",
+        "https://*.google.com/*",
+        "https://*.coinbase.com/*",
+        "https://*.github.com/*",
+        "https://*.twitter.com/*",
+        "https://*.instagram.com/*",
+        "https://*.facebook.com/*",
+        "https://*.amazon.com/*",
+        "https://*.linkedin.com/*",
+        "https://*.robinhood.com/*"
+      ]
     }
   ],
   "background": {
@@ -24,6 +35,19 @@
     "default_popup": "popup.html",
     "default_title": "Open the popup"
   },
-  "permissions": ["tabs", "https://www.youtube.com/*", "https://*.google.com/*", "storage"],
+  "permissions": [
+    "tabs",
+    "https://*.youtube.com/*",
+    "https://*.google.com/*",
+    "https://*.coinbase.com/*",
+    "https://*.github.com/*",
+    "https://*.twitter.com/*",
+    "https://*.instagram.com/*",
+    "https://*.facebook.com/*",
+    "https://*.amazon.com/*",
+    "https://*.linkedin.com/*",
+    "https://*.robinhood.com/*",
+    "storage"
+  ],
   "web_accessible_resources": ["blocked.html"]
 }
