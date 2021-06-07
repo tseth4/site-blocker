@@ -1,0 +1,13 @@
+.blocked-container{
+  background-color: #4470AD;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blocked-container-title{
+  font-size: 100px;
+  color: white;
+}

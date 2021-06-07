@@ -58,5 +58,6 @@ add the url permissions to the manifest.json
 ```
 
 ### Bug report / issues
+* app crash - unresolved
 
 tzrtg@protonmail.com

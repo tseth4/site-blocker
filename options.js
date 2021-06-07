@@ -23,6 +23,7 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
 });
 
 chrome.storage.local.get("blockedSites", (response) => {
+  console.log(response)
   if (!isEmpty(response)) {
     let siteList = document.querySelector("#site-list");
     response.blockedSites.forEach((e) => {

@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Test Extension Options</title>
+    <title>Site Block: Options</title>
+    <link rel="stylesheet" href="options.css" />
   </head>
   <body>
-    <textarea
-      placeholder="mail.google.com,facebook.com,twitter.com,linkedin.com,instagram.com,youtube.com,coinbase.com,github.com,amazon.com,linkedin.com,robinhood.com"
-      id="site-input"
-      name="site-input"
-      rows="4"
-      cols="50"
-    >
-    </textarea>
-    <button id="save-sites">block.</button>
-    <h4>current blocking</h4>
-    <ul id="site-list"></ul>
+    <div class="options-container">
+      <h1>Site Block: Options</h1>
+      <div class="options-container-textarea">
+        <textarea
+          placeholder="mail.google.com,facebook.com,twitter.com,linkedin.com,instagram.com,youtube.com,coinbase.com,github.com,amazon.com,linkedin.com,robinhood.com"
+          id="site-input"
+          name="site-input"
+          rows="4"
+          cols="50"
+        ></textarea>
+      </div>
+      <div class="options-container-button-container">
+        <button id="save-sites">block.</button>
+      </div>
+      <h4>current blocking</h4>
+      <ul id="site-list"></ul>
+    </div>
     <script src="options.js"></script>
   </body>
 </html>
