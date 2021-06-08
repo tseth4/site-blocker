@@ -1,7 +1,5 @@
 # Site-blocker
 
-Blocking sites a compulsively check
-
 <!-- # Components -->
 <!-- ![diagram](assets/stay-focused-diagram.svg) -->
 
