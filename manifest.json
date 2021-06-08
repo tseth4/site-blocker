@@ -23,7 +23,8 @@
         "https://*.facebook.com/*",
         "https://*.amazon.com/*",
         "https://*.linkedin.com/*",
-        "https://*.robinhood.com/*"
+        "https://*.robinhood.com/*",
+        "https://*.discord.com/*"
       ]
     }
   ],
@@ -47,6 +48,7 @@
     "https://*.amazon.com/*",
     "https://*.linkedin.com/*",
     "https://*.robinhood.com/*",
+    "https://*.discord.com/*",
     "storage"
   ],
   "web_accessible_resources": ["blocked.html"]

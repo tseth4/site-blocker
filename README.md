@@ -27,15 +27,7 @@ add the url permissions to the manifest.json
       "css": ["content.css"],
       "matches": [
         "https://*.youtube.com/*",
-        "https://*.google.com/*",
-        "https://*.coinbase.com/*",
-        "https://*.github.com/*",
-        "https://*.twitter.com/*",
-        "https://*.instagram.com/*",
-        "https://*.facebook.com/*",
-        "https://*.amazon.com/*",
-        "https://*.linkedin.com/*",
-        "https://*.robinhood.com/*"
+        ...
       ]
     }
   ],
@@ -44,15 +36,8 @@ add the url permissions to the manifest.json
   "permissions": [
     "tabs",
     "https://*.youtube.com/*",
-    "https://*.google.com/*",
-    "https://*.coinbase.com/*",
-    "https://*.github.com/*",
-    "https://*.twitter.com/*",
-    "https://*.instagram.com/*",
-    "https://*.facebook.com/*",
-    "https://*.amazon.com/*",
-    "https://*.linkedin.com/*",
-    "https://*.robinhood.com/*",
+    ....
+
     "storage"
   ],
 ```
