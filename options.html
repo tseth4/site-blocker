@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Site Block: Options</title>
-    <link rel="stylesheet" href="options.css" />
-  </head>
-  <body>
-    <div class="options-container">
-      <h1>Site Block: Options</h1>
-      <div class="options-container-textarea">
-        <textarea
-          placeholder="mail.google.com,facebook.com,twitter.com,linkedin.com,instagram.com,youtube.com,coinbase.com,github.com,amazon.com,linkedin.com,robinhood.com"
-          id="site-input"
-          name="site-input"
-          rows="4"
-          cols="50"
-        ></textarea>
-      </div>
-      <div class="options-container-button-container">
-        <button id="save-sites">block.</button>
-      </div>
-      <h4>current blocking</h4>
-      <ul id="site-list"></ul>
+
+<head>
+  <title>Site Block: Options</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+
+<body>
+  <div class="options-container">
+    <h1>Site Block: Options</h1>
+    <div class="options-container-inputs">
+      <input class="save_site_input" type="text">
+      <button class="save_site_button">+</button>
     </div>
-    <script src="options.js"></script>
-  </body>
+    <div class="blocked_sites_container">
+      <h4>Blocked</h4>
+      <div id="site-list"></div>
+    </div>
+    <div class="options-container-button-container">
+      <!-- <button id="save-sites">save.</button> -->
+      <!-- <button id="clear-sites">clear.</button> -->
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+
 </html>

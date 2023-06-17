@@ -4,18 +4,20 @@
   justify-content: center;
   align-items: center;
   padding: 25px;
+  /* border: 2px solid red; */
 }
 
-.options-container div {
+.options-container > div {
   margin: 15px;
 }
 
-.options-container-textarea {
+.options-container-inputs {
   border-radius: 25px;
   box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
     -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
   padding: 25px;
 }
+
 .options-container-textarea textarea {
   border: none;
   height: 255px;
@@ -33,6 +35,28 @@ body {
 
 #site-list {
   list-style-type: none;
+  width: 100%;
+}
+
+.site_list__site {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.blocked_sites_container {
+  border-radius: 25px;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+.blocked_sites_container > * {
+  /* border: 2px solid black; */
 }
 
 /* button */
@@ -49,5 +73,21 @@ body {
   cursor: pointer;
   border-radius: 25px;
   box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-  -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+#clear-sites {
+  background-color: rgb(174, 57, 57);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
 }
