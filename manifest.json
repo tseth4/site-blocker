@@ -1,55 +1,42 @@
 {
   "name": "site-blocker",
   "description": "block sites",
-  "version": "0.1.0",
-  "manifest_version": 2,
+  "version": "2.0",
+  "manifest_version": 3,
   "icons": {
-    "16": "./assets/icons8-cancel-64.png",
-    "32": "./assets/icons8-cancel-128.png",
-    "48": "./assets/icons8-cancel-256.png",
-    "128": "./assets/icons8-cancel-512.png"
+    "16": "assets/icons8-cancel-64.png",
+    "32": "assets/icons8-cancel-128.png",
+    "48": "assets/icons8-cancel-256.png",
+    "128": "assets/icons8-cancel-512.png"
   },
   "content_scripts": [
     {
       "js": ["content.js"],
       "css": ["content.css"],
-      "matches": [
-        "https://*.youtube.com/*",
-        "https://*.google.com/*",
-        "https://*.coinbase.com/*",
-        "https://*.github.com/*",
-        "https://*.twitter.com/*",
-        "https://*.instagram.com/*",
-        "https://*.facebook.com/*",
-        "https://*.amazon.com/*",
-        "https://*.linkedin.com/*",
-        "https://*.robinhood.com/*",
-        "https://*.discord.com/*"
-      ]
+      "matches": ["https://*/*", "http://*/*"]
     }
   ],
   "background": {
-    "scripts": ["./background.js"]
+    "service_worker": "background.js"
   },
-  "options_page": "./options.html",
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_title": "Open the popup"
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html"
   },
-  "permissions": [
-    "tabs",
-    "https://*.youtube.com/*",
-    "https://*.google.com/*",
-    "https://*.coinbase.com/*",
-    "https://*.github.com/*",
-    "https://*.twitter.com/*",
-    "https://*.instagram.com/*",
-    "https://*.facebook.com/*",
-    "https://*.amazon.com/*",
-    "https://*.linkedin.com/*",
-    "https://*.robinhood.com/*",
-    "https://*.discord.com/*",
-    "storage"
+  "permissions": ["scripting", "activeTab", "storage", "tabs"],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
   ],
-  "web_accessible_resources": ["blocked.html"]
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "blocked.html"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ]
+
 }

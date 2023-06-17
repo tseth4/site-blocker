@@ -1,8 +1,8 @@
-console.log("content jay es");
 chrome.runtime.onMessage.addListener((request) => {
-  let blockedHtmlUrl = chrome.extension.getURL("blocked.html");
+  let blockedHtmlUrl = chrome.runtime.getURL("blocked.html");
+  console.log("blockedHtmlUrl: ", blockedHtmlUrl)
   chrome.storage.local.get("blockedSites", (response) => {
-    console.log(response);
+    console.log("response: ", response);
     response.blockedSites.forEach((e) => {
       if (e) {
         console.log(e);

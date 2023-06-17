@@ -1,11 +1,16 @@
-// send url information to content
-chrome.tabs.onUpdated.addListener((tab) => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.insertCSS(null, { file: "./content.css" });
-    tabs.forEach((tab) => {
-      let tabUrl = tab.url;
-      let tabId = tab.id;
-      chrome.tabs.sendMessage(tabId, { tabUrl });
-    });
+chrome.tabs.onActivated.addListener(async (tab) => {
+  console.log("tabs.activeated");
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    console.log("tabs: ", tabs)
+    chrome.tabs.sendMessage(tabs[0].id, { tabUrl: tabs[0].url })
   });
 });
+
+chrome.tabs.onUpdated.addListener(async (tab) => {
+  console.log("tabs.onUpdated");
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    console.log("tabs: ", tabs)
+    chrome.tabs.sendMessage(tabs[0].id, { tabUrl: tabs[0].url })
+  });
+});
+
