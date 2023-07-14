@@ -26,7 +26,18 @@ saveSiteButton.addEventListener("click", () => {
   } else {
     console.log("novalue");
   }
-})
+});
+saveSiteInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    if (saveSiteInput.value) {
+      console.log("hasvalue")
+      saveSite(saveSiteInput.value);
+      saveSiteInput.value = "";
+    } else {
+      console.log("novalue");
+    }
+  }
+});
 
 chrome.storage.onChanged.addListener(function (changes, namespace) {
   let siteList = document.querySelector("#site-list");
@@ -53,8 +64,6 @@ function handleRemoveSiteButtons() {
   let removeSiteButtons = document.querySelectorAll(".site_list__remove_button")
   for (let i = 0; i < removeSiteButtons.length; i++) {
     removeSiteButtons[i].addEventListener("click", (e) => {
-      // console.log("e button: ", e);
-      // console.log("rsbi: ", removeSiteButtons[i]);
       removeSiteFromLocalStorage(i)
 
     })
